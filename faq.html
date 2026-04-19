@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ · Omnia by Ignite</title>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+    .faq-item[open] { border-color: var(--border-hover); }
+    .faq-item summary {
+      list-style: none;
+      padding: 1.2rem 1.5rem;
+      font-weight: 600;
+      font-size: 0.9875rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      background: var(--bg-card);
+      transition: background 0.2s ease;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary:hover { background: rgba(255,106,0,0.05); }
+    .faq-plus {
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--ember);
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+    .faq-item[open] .faq-plus { transform: rotate(45deg); }
+    .faq-body {
+      padding: 0 1.5rem 1.4rem;
+      font-size: 0.9375rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      background: var(--bg-card);
+    }
+    .faq-category {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ember);
+      margin: 2.5rem 0 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .faq-category::before {
+      content: '';
+      display: block;
+      width: 16px; height: 1px;
+      background: var(--ember);
+    }
+  </style>
+</head>
+<body>
+<div class="page-content">
+
+  <div class="page-hero">
+    <div class="page-hero-eyebrow">Agent FAQ</div>
+    <h1>Your questions, <span class="ember-grad">answered.</span></h1>
+    <p>Everything you need to know before joining Omnia. Can't find what you're looking for? Book a call and ask us directly.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="section-inner" style="max-width:780px;">
+
+      <!-- Getting Started -->
+      <div class="faq-category">Getting Started</div>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <details class="faq-item fade-up">
+          <summary>Do I need a license to get started?<span class="faq-plus">+</span></summary>
+          <div class="faq-body">You must be licensed to sell, but you can start the interview process, onboarding, and training before you pass your exam. Most states allow you to get licensed in 1–3 weeks. We'll guide you through every step.</div>
+        </details>
+        <details class="faq-item fade-up" data-delay="0.05">
+          <summary>Is there a cost to join Omnia?<span class="faq-plus">+</span></summary>
+          <div class="faq-body">There is no buy-in, no franchise fee, and no charge to join our organization. Standard costs include your state licensing exam fee (~$40–$100) and E&O insurance (~$200–$400/year). That's it — and those are standard industry costs for any independent agent.</div>
+        </details>
+        <details class="faq-item fade-up" data-delay="0.1">
+          <summary>Is this 1099 or W2?<span class="faq-plus">+</span></summary>
+          <div class="faq-body">This is a 1099 independent contractor position. You are your own business. That means full scheduling flexibility, the ability to build your own team, and access to significant tax advantages that W2 employees don't get.</div>
+        </details>
+        <details class="faq-item fade-up" data-delay="0.15">
+          <summary>Can I work part-time while keeping my current job?<span class="faq-plus">+</span></summary>
+          <div class="faq-body">Absolutely. Many of our top agents started part-time — 10–15 hours a week — while keeping their day job. Once your insurance income exceeds your current salary, most choose to transition full-time. We support you at every stage.</div>
+        </details>
+      </div>
+
+      <!-- Leads & Sales -->
+      <div class="faq-category">Leads & Sales</div>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <details class="faq-item fade-up">
+          <summary>Do you provide leads, or do I have to find my own?<span class="faq-plus">+</span></summary>
+          <div class="faq-body">We have a robust warm lead program. Leads are available for purchase at cost — these are pre-qualified, exclusive leads from people who have recently requested information about life insurance. You are not cold calling strangers. Ever.</div>
+        </details>
+        <details class="faq-item fade-up" data-delay="0.05">
+          <summary>How fast can I make my first sale?<span class="faq-plus">+</span></summary>
+          <div class="faq-body">Most agents who follow the system make their first sale within 7–14 days of becoming active. Some do it on day one. Results depend on effort, consistency, and following the proven process your mentor will teach you.</div>
+        </details>
+        <details class="faq-item fade-up" data-delay="0.1">
+          <summary>What carriers do you work with?<span class="faq-plus">+</span></summary>
+          <div class="faq-body">We are contracted with 20+ top-rated A+ carriers including some of the most recognized names in the life insurance industry. Having multiple carrier options means you can always find the right product for each client's situation — which translates directly to more sales.</div>
+        </details>
+        <details class="faq-item fade-up" data-delay="0.15">
+          <summary>Is everything really 100% remote?<span class="faq-plus">+</span></summary>
+          <div class="faq-body">Yes. Every aspect of the job — presentations, applications, training, team meetings — is done virtually. You work from your home, a coffee shop, or wherever you have a laptop and internet connection. We operate in all 50 states.</div>
+        </details>
+      </div>
+
+      <!-- Compensation -->
+      <div class="faq-category">Compensation & Growth</div>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <details class="faq-item fade-up">
+          <summary>How does the commission structure work?<span class="faq-plus">+</span></summary>
+          <div class="faq-body">Commissions are paid as a percentage of the first-year premium for each policy you sell. Omnia offers among the highest commission levels in the industry. Your exact rate depends on your contract level, which scales up as you produce. Full transparency — no hidden deductions.</div>
+        </details>
+        <details class="faq-item fade-up" data-delay="0.05">
+          <summary>Can I build my own team and earn overrides?<span class="faq-plus">+</span></summary>
+          <div class="faq-body">Yes. Once you're established as a producing agent, you can recruit and train your own agents and earn override commissions on everything they produce. This is how top earners build income that compounds over time. There is no limit to how large your team can grow.</div>
+        </details>
+        <details class="faq-item fade-up" data-delay="0.1">
+          <summary>What does the average agent actually earn?<span class="faq-plus">+</span></summary>
+          <div class="faq-body">Part-time agents (5–15 hrs/week) typically earn $2,000–$5,000/month. Full-time agents earn $6,000–$15,000/month. Senior agents with small teams earn $15,000–$30,000+/month. These are realistic ranges based on active agent data — not cherry-picked outliers.</div>
+        </details>
+        <details class="faq-item fade-up" data-delay="0.15">
+          <summary>When and how do I get paid?<span class="faq-plus">+</span></summary>
+          <div class="faq-body">Commissions are paid directly by the carrier — typically within 5–10 business days of a policy being issued. There is no middleman holding your money. Most agents receive their first commission check within 2–3 weeks of their first sale.</div>
+        </details>
+      </div>
+
+      <!-- Training -->
+      <div class="faq-category">Training & Support</div>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <details class="faq-item fade-up">
+          <summary>What training do you provide?<span class="faq-plus">+</span></summary>
+          <div class="faq-body">New agents go through our Omnia Fast-Start program — a structured onboarding covering scripts, product knowledge, running virtual presentations, objection handling, and how to use our systems. After that, ongoing weekly training calls, a private agent community, and 1-on-1 mentorship are all available.</div>
+        </details>
+        <details class="faq-item fade-up" data-delay="0.05">
+          <summary>Do I need sales experience?<span class="faq-plus">+</span></summary>
+          <div class="faq-body">No. Many of our most successful agents had zero sales background before joining Omnia. What matters most is coachability, work ethic, and willingness to follow the system. We'll teach you everything else.</div>
+        </details>
+      </div>
+
+      <!-- CTA -->
+      <div class="fade-up" style="margin-top:3.5rem;padding:2.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;text-align:center;">
+        <h3 style="font-size:1.4rem;font-weight:800;margin-bottom:0.75rem;">Still have questions?</h3>
+        <p style="font-size:0.9375rem;color:var(--text-2);line-height:1.75;max-width:38ch;margin:0 auto 1.75rem;">Book a no-pressure discovery call and ask us anything directly.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="book.html" class="btn-primary">Book a Call →</a>
+          <a href="apply.html" class="btn-outline">Apply Now</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+<script src="shared.js"></script>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const d = e.target.dataset.delay || 0;
+        setTimeout(() => e.target.classList.add('visible'), d * 1000);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

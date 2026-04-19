@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Call · Omnia by Ignite</title>
+  <link rel="stylesheet" href="shared.css"/>
+</head>
+<body>
+<div class="page-content">
+
+  <div class="page-hero">
+    <div class="page-hero-eyebrow">No Pressure. No Obligation.</div>
+    <h1>Book a <span class="ember-grad">Discovery Call.</span></h1>
+    <p>15–20 minutes with an Omnia agent manager. Ask anything, learn everything, and decide if this is the right move for you.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="section-inner" style="display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start;">
+
+      <!-- LEFT — what to expect -->
+      <div class="fade-up">
+        <div class="section-label">What to Expect</div>
+        <h2 class="section-title" style="font-size:clamp(1.5rem,2.8vw,2.1rem);">A real conversation,<br/><span class="ember-grad">not a sales pitch.</span></h2>
+        <p style="font-size:0.9375rem;color:var(--text-2);line-height:1.8;margin:1.2rem 0 2rem;">
+          Our discovery calls are casual, informative, and pressure-free. We want to make sure Omnia is the right fit for you — not just fill a seat.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+          <div style="display:flex;gap:14px;align-items:flex-start;">
+            <div class="card-icon" style="flex-shrink:0;">⏱️</div>
+            <div>
+              <div style="font-weight:600;margin-bottom:3px;">15–20 Minutes</div>
+              <div style="font-size:0.875rem;color:var(--text-2);">Focused, efficient, and respectful of your time.</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;">
+            <div class="card-icon" style="flex-shrink:0;">🎯</div>
+            <div>
+              <div style="font-weight:600;margin-bottom:3px;">Personalized to You</div>
+              <div style="font-size:0.875rem;color:var(--text-2);">We'll talk about your goals, your schedule, and your background — not a generic script.</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;">
+            <div class="card-icon" style="flex-shrink:0;">💬</div>
+            <div>
+              <div style="font-weight:600;margin-bottom:3px;">All Questions Welcome</div>
+              <div style="font-size:0.875rem;color:var(--text-2);">Pay structure, leads, licensing, time commitment — ask whatever's on your mind.</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;">
+            <div class="card-icon" style="flex-shrink:0;">📞</div>
+            <div>
+              <div style="font-weight:600;margin-bottom:3px;">Phone or Video</div>
+              <div style="font-size:0.875rem;color:var(--text-2);">Your choice — we'll send a confirmation with your preferred meeting link.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT — booking form -->
+      <div class="fade-up" data-delay="0.15">
+        <div class="card" style="padding:2.5rem;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.4rem;">Schedule Your Call</h3>
+          <p style="font-size:0.875rem;color:var(--text-2);margin-bottom:2rem;">We'll confirm within a few hours and send a calendar invite.</p>
+          <a id="book-calendar-link-top" href="#" target="_blank" rel="noopener noreferrer" class="btn-outline" style="margin-bottom:1.25rem;display:none;justify-content:center;">
+            Book instantly on calendar ↗
+          </a>
+          <div id="book-calendar-embed-wrap" style="display:none;margin-bottom:1.25rem;background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:12px;padding:0.9rem;">
+            <div style="font-size:0.74rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ember);margin-bottom:0.6rem;">Instant booking</div>
+            <iframe id="book-calendar-embed" title="Omnia discovery call calendar" src="" style="width:100%;height:680px;border:0;border-radius:10px;background:#fff;"></iframe>
+            <p style="font-size:0.76rem;color:var(--text-3);line-height:1.5;margin:0.55rem 0 0;">If this frame is blocked on your browser, use the booking button above.</p>
+          </div>
+
+          <form id="book-form" style="display:flex;flex-direction:column;gap:1.25rem;">
+            <div class="grid-2" style="gap:1rem;">
+              <div class="form-group">
+                <label class="form-label">First Name *</label>
+                <input type="text" class="form-input" placeholder="John" required/>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Last Name *</label>
+                <input type="text" class="form-input" placeholder="Smith" required/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="form-input" placeholder="you@email.com" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number *</label>
+              <input type="tel" class="form-input" placeholder="(555) 000-0000" required/>
+            </div>
+            <div class="grid-2" style="gap:1rem;">
+              <div class="form-group">
+                <label class="form-label">Preferred Date *</label>
+                <input type="date" class="form-input" required id="pref-date"/>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Preferred Time *</label>
+                <select class="form-select form-input" required>
+                  <option value="">Select a time</option>
+                  <option>9:00 AM</option>
+                  <option>10:00 AM</option>
+                  <option>11:00 AM</option>
+                  <option>12:00 PM</option>
+                  <option>1:00 PM</option>
+                  <option>2:00 PM</option>
+                  <option>3:00 PM</option>
+                  <option>4:00 PM</option>
+                  <option>5:00 PM</option>
+                  <option>6:00 PM</option>
+                  <option>7:00 PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Call Format</label>
+              <select class="form-select form-input">
+                <option>Phone Call</option>
+                <option>Video Call (Zoom)</option>
+                <option>No preference</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Are you currently licensed? *</label>
+              <select class="form-select form-input" required>
+                <option value="">Select one</option>
+                <option>Yes — Life & Health licensed</option>
+                <option>No — but I'm working on it</option>
+                <option>No — I'd need to get licensed</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Anything you want us to know?</label>
+              <textarea class="form-textarea form-input" placeholder="Your current situation, goals, questions — anything helps us prepare for your call."></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:0.9375rem;">
+              Confirm My Call →
+            </button>
+            <p style="font-size:0.72rem;color:var(--text-3);text-align:center;letter-spacing:0.04em;">
+              🔒 &nbsp;Your information is private and never shared or sold.
+            </p>
+          </form>
+
+          <!-- Success state -->
+          <div id="book-success" style="display:none;text-align:center;padding:2rem 0;">
+            <div style="font-size:3rem;margin-bottom:1rem;">🔥</div>
+            <h3 style="font-size:1.4rem;font-weight:800;margin-bottom:0.75rem;">You're on the calendar!</h3>
+            <p style="font-size:0.9375rem;color:var(--text-2);line-height:1.75;max-width:32ch;margin:0 auto;">
+              Check your inbox for a confirmation. We're looking forward to talking with you.
+            </p>
+            <a id="book-calendar-link-success" href="#" target="_blank" rel="noopener noreferrer" class="btn-outline" style="margin-top:1rem;display:none;">
+              Book instantly on calendar ↗
+            </a>
+            <a href="apply.html" class="btn-primary" style="margin-top:1.75rem;display:inline-flex;">
+              Start Your Application Too →
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+<script src="shared.js"></script>
+<script>
+  const CALENDAR_BOOKING_URL = 'https://calendar.app.google/4WiJjhkt65tLAVLs5';
+
+  // Set min date to today
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('pref-date').min = today;
+
+  const bookCalendarLinkTop = document.getElementById('book-calendar-link-top');
+  const bookCalendarLinkSuccess = document.getElementById('book-calendar-link-success');
+  const bookCalendarEmbedWrap = document.getElementById('book-calendar-embed-wrap');
+  const bookCalendarEmbed = document.getElementById('book-calendar-embed');
+
+  if (CALENDAR_BOOKING_URL && !CALENDAR_BOOKING_URL.includes('REPLACE_WITH')) {
+    bookCalendarLinkTop.href = CALENDAR_BOOKING_URL;
+    bookCalendarLinkTop.style.display = 'inline-flex';
+    bookCalendarLinkSuccess.href = CALENDAR_BOOKING_URL;
+    bookCalendarLinkSuccess.style.display = 'inline-flex';
+    bookCalendarEmbed.src = CALENDAR_BOOKING_URL;
+    bookCalendarEmbedWrap.style.display = 'block';
+  }
+
+  document.getElementById('book-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display = 'none';
+    document.getElementById('book-success').style.display = 'block';
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const d = e.target.dataset.delay || 0;
+        setTimeout(() => e.target.classList.add('visible'), d * 1000);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+<style>
+  @media(max-width:820px){
+    .section-inner[style*="grid-template-columns:1fr 1.4fr"]{display:block!important;}
+    .section-inner[style*="grid-template-columns:1fr 1.4fr"] > *:first-child{margin-bottom:2.5rem;}
+  }
+</style>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply · Omnia by Ignite — Agent Application</title>
+  <link rel="stylesheet" href="shared.css"/>
+</head>
+<body>
+<div class="page-content">
+
+  <div class="page-hero">
+    <div class="page-hero-eyebrow">Agent Application</div>
+    <h1>Start your <span class="ember-grad">Omnia journey.</span></h1>
+    <p>Takes less than 5 minutes. A member of our team reviews every application and will reach out within 24 hours.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="section-inner" style="max-width:680px;">
+      <div class="card fade-up" style="padding:2.5rem;">
+
+        <form id="apply-form" style="display:flex;flex-direction:column;gap:1.4rem;">
+
+          <!-- Personal -->
+          <div>
+            <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--ember);margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:1px solid var(--border);">
+              Personal Info
+            </div>
+            <div style="display:flex;flex-direction:column;gap:1rem;">
+              <div class="grid-2" style="gap:1rem;">
+                <div class="form-group">
+                  <label class="form-label">First Name *</label>
+                  <input type="text" class="form-input" name="firstName" placeholder="John" required/>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Last Name *</label>
+                  <input type="text" class="form-input" name="lastName" placeholder="Smith" required/>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address *</label>
+                <input type="email" class="form-input" name="email" placeholder="you@email.com" required/>
+              </div>
+              <div class="grid-2" style="gap:1rem;">
+                <div class="form-group">
+                  <label class="form-label">Phone Number *</label>
+                  <input type="tel" class="form-input" name="phone" placeholder="(555) 000-0000" required/>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">State You Live In *</label>
+                  <select class="form-select form-input" name="state" required>
+                    <option value="">Select state</option>
+                    <option>Alabama</option><option>Alaska</option><option>Arizona</option>
+                    <option>Arkansas</option><option>California</option><option>Colorado</option>
+                    <option>Connecticut</option><option>Delaware</option><option>Florida</option>
+                    <option>Georgia</option><option>Hawaii</option><option>Idaho</option>
+                    <option>Illinois</option><option>Indiana</option><option>Iowa</option>
+                    <option>Kansas</option><option>Kentucky</option><option>Louisiana</option>
+                    <option>Maine</option><option>Maryland</option><option>Massachusetts</option>
+                    <option>Michigan</option><option>Minnesota</option><option>Mississippi</option>
+                    <option>Missouri</option><option>Montana</option><option>Nebraska</option>
+                    <option>Nevada</option><option>New Hampshire</option><option>New Jersey</option>
+                    <option>New Mexico</option><option>New York</option><option>North Carolina</option>
+                    <option>North Dakota</option><option>Ohio</option><option>Oklahoma</option>
+                    <option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option>
+                    <option>South Carolina</option><option>South Dakota</option><option>Tennessee</option>
+                    <option>Texas</option><option>Utah</option><option>Vermont</option>
+                    <option>Virginia</option><option>Washington</option><option>West Virginia</option>
+                    <option>Wisconsin</option><option>Wyoming</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Background -->
+          <div>
+            <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--ember);margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:1px solid var(--border);">
+              Background
+            </div>
+            <div style="display:flex;flex-direction:column;gap:1rem;">
+              <div class="form-group">
+                <label class="form-label">Do you currently have a Life & Health License? *</label>
+                <select class="form-select form-input" name="licenseStatus" required>
+                  <option value="">Select one</option>
+                  <option>Yes — fully licensed</option>
+                  <option>In progress — taking the exam soon</option>
+                  <option>No — would need to get licensed</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Sales or Insurance Experience?</label>
+                <select class="form-select form-input" name="experienceLevel">
+                  <option>No experience — completely new</option>
+                  <option>Some sales experience (non-insurance)</option>
+                  <option>Insurance experience at another agency</option>
+                  <option>Extensive sales background</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Current Employment Status *</label>
+                <select class="form-select form-input" name="employmentStatus" required>
+                  <option value="">Select one</option>
+                  <option>Employed full-time — looking to transition</option>
+                  <option>Employed part-time — looking to add income</option>
+                  <option>Self-employed / entrepreneur</option>
+                  <option>Unemployed — ready to start immediately</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Goals -->
+          <div>
+            <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--ember);margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:1px solid var(--border);">
+              Your Goals
+            </div>
+            <div style="display:flex;flex-direction:column;gap:1rem;">
+              <div class="form-group">
+                <label class="form-label">Income Goal in Your First Year *</label>
+                <select class="form-select form-input" name="incomeGoal" required>
+                  <option value="">Select range</option>
+                  <option>$20,000 – $40,000 (part-time supplement)</option>
+                  <option>$40,000 – $80,000 (replace my income)</option>
+                  <option>$80,000 – $150,000 (serious full-time)</option>
+                  <option>$150,000+ (agency builder mindset)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">How Many Hours Per Week Can You Commit? *</label>
+                <select class="form-select form-input" name="hoursPerWeek" required>
+                  <option value="">Select range</option>
+                  <option>5–10 hrs/week (part-time)</option>
+                  <option>15–25 hrs/week (serious part-time)</option>
+                  <option>30–40 hrs/week (full-time)</option>
+                  <option>40+ hrs/week (all-in)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Why do you want to join Omnia? *</label>
+                <textarea class="form-textarea form-input" name="joinReason" placeholder="Tell us what drew you to this opportunity and what you're hoping to achieve..." required></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label">How did you hear about us?</label>
+                <select class="form-select form-input" name="leadSource">
+                  <option>Social Media</option>
+                  <option>Referred by an Omnia Agent</option>
+                  <option>Google Search</option>
+                  <option>YouTube</option>
+                  <option>Friend or Family</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:rgba(255,106,0,0.06);border:1px solid rgba(255,106,0,0.15);border-radius:8px;padding:1rem 1.25rem;font-size:0.875rem;color:var(--text-2);line-height:1.65;">
+            <strong style="color:var(--text-1);">What happens next:</strong> A member of our team will review your application and reach out within 24 hours to schedule a brief intro call. No commitment required at this stage.
+          </div>
+
+          <button id="apply-submit" type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:1rem;padding:1rem;">
+            Submit My Application →
+          </button>
+          <p id="apply-status" style="display:none;font-size:0.82rem;text-align:center;color:var(--text-2);"></p>
+          <p style="font-size:0.72rem;color:var(--text-3);text-align:center;">
+            🔒 &nbsp;Your information is private and never sold or shared.
+          </p>
+        </form>
+
+        <!-- Success -->
+        <div id="apply-success" style="display:none;text-align:center;padding:3rem 1rem;">
+          <div style="font-size:3.5rem;margin-bottom:1.2rem;">🔥</div>
+          <h3 style="font-size:1.6rem;font-weight:900;margin-bottom:0.75rem;">Application Received!</h3>
+          <p style="font-size:1rem;color:var(--text-2);line-height:1.8;max-width:36ch;margin:0 auto 2rem;">
+            We'll review your application and reach out within 24 hours. Get ready — your next chapter starts here.
+          </p>
+          <div id="apply-calendar-embed-wrap" style="display:none;margin:0 auto 1.25rem;max-width:760px;text-align:left;background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:12px;padding:1rem;">
+            <div style="font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ember);margin-bottom:0.6rem;">Book instantly</div>
+            <iframe id="apply-calendar-embed" title="Book your Omnia discovery call" src="" style="width:100%;height:720px;border:0;border-radius:10px;background:#fff;"></iframe>
+            <p style="font-size:0.78rem;color:var(--text-3);margin-top:0.65rem;">If the calendar doesn't load in this frame, use the button below to open it directly.</p>
+          </div>
+          <a href="book.html" class="btn-outline">Book a call while you wait →</a>
+          <a id="apply-calendar-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top:1rem;display:none;">
+            Book instantly on calendar ↗
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+<script src="shared.js"></script>
+<script>
+  const GOOGLE_SHEETS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyBduyTD6RcIz84OjElzqqexnClYElOzxCOhQhaq6ouBtKQ1vlQg5GcPdlmWhUImMz1/exec';
+  const CALENDAR_BOOKING_URL = 'https://calendar.app.google/4WiJjhkt65tLAVLs5';
+
+  const applyForm = document.getElementById('apply-form');
+  const applySuccess = document.getElementById('apply-success');
+  const applyStatus = document.getElementById('apply-status');
+  const applySubmit = document.getElementById('apply-submit');
+  const applyCalendarLink = document.getElementById('apply-calendar-link');
+  const applyCalendarEmbedWrap = document.getElementById('apply-calendar-embed-wrap');
+  const applyCalendarEmbed = document.getElementById('apply-calendar-embed');
+
+  if (CALENDAR_BOOKING_URL && !CALENDAR_BOOKING_URL.includes('REPLACE_WITH')) {
+    applyCalendarLink.href = CALENDAR_BOOKING_URL;
+    applyCalendarLink.style.display = 'inline-flex';
+    applyCalendarEmbed.src = CALENDAR_BOOKING_URL;
+    applyCalendarEmbedWrap.style.display = 'block';
+  }
+
+  applyForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    if (!GOOGLE_SHEETS_WEB_APP_URL || GOOGLE_SHEETS_WEB_APP_URL.includes('REPLACE_WITH')) {
+      applyStatus.textContent = 'Add your Google Apps Script Web App URL before submitting leads.';
+      applyStatus.style.display = 'block';
+      applyStatus.style.color = '#ff8a80';
+      return;
+    }
+
+    applySubmit.disabled = true;
+    applySubmit.textContent = 'Submitting...';
+    applyStatus.textContent = 'Sending your application...';
+    applyStatus.style.display = 'block';
+    applyStatus.style.color = 'var(--text-2)';
+
+    try {
+      const formData = new FormData(applyForm);
+      formData.append('submittedAt', new Date().toISOString());
+      formData.append('page', location.href);
+
+      await fetch(GOOGLE_SHEETS_WEB_APP_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+        },
+        body: new URLSearchParams(formData)
+      });
+
+      applyForm.style.display = 'none';
+      applySuccess.style.display = 'block';
+    } catch (error) {
+      applyStatus.textContent = 'Something went wrong. Please try again or contact support.';
+      applyStatus.style.color = '#ff8a80';
+      applySubmit.disabled = false;
+      applySubmit.textContent = 'Submit My Application →';
+    }
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
